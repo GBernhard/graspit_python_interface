@@ -16,17 +16,21 @@ This is for development purpose.
 - Ubuntu: This interface was built on Ubuntu 16.04
 - GraspIt!: While building, the shared library of GraspIt! is linked. It is necessary, to build GraspIt! before using this interface. For installing GraspIt! see the installation instructions at http://graspit-simulator.github.io/.
 
-Building the interface:
-1. Install necessary prerequisites.
-2. Adapt the include paths in the Makefile, so it matches your local environment.
-3. Build the Interface by running make in this directory ($ make)
+2. Building the interface:
+- Install necessary prerequisites.
+- Adapt the include paths in the Makefile, so it matches your local environment.
+- Build the Interface by running make in this directory ($ make)
 
-Removing built files:
+ --- Remove ---
+ 
 By executing the command "$ make clean" you remove the files created by make.
 
  --- Using the interface ---
 
 After building, you can use the interface as an common python package:
+
 import graspit_python_interface
+
 interface = graspit_python_interface.GraspitPythonInterface()
+
 interface.startGraspit()
