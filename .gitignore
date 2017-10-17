@@ -1,0 +1,9 @@
+/build
+/devel
+/install
+/.idea
+
+_graspit_python_interface.so
+graspit_python_interface.py
+graspit_python_interface.pyc
+logfile
