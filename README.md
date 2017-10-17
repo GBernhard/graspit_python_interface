@@ -29,6 +29,8 @@ By executing the command "$ make clean" you remove the files created by make.
 After building, you can use the interface as an common python package:
 /#--- in main.py
 import graspit_python_interface
+
 interface = graspit_python_interface.GraspitPythonInterface()
+
 interface.startGraspit()
 /#---
