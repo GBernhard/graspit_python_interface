@@ -5,5 +5,5 @@
 
 _graspit_python_interface.so
 graspit_python_interface.py
-graspit_python_interface.pyc
+*.pyc
 logfile

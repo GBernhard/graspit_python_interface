@@ -11,7 +11,7 @@ This is for development purpose.
 
 1. Prerequisites: 
 - Swig: This interface was built and tested with swig version 3.0.
-- Python: This interface was used in Python Version 2.7. The Python environment is defined in PY_INCLUDE in the Makefile.
+- Python: This interface was used in Python Version 2.7. The Python environment is defined in PY_INCLUDE in the Makefile. The header files and static libraries for python dev must be installed.
 - Make: This interface was built using Make utility.
 - Ubuntu: This interface was built on Ubuntu 16.04
 - GraspIt!: While building, the shared library of GraspIt! is linked. It is necessary, to build GraspIt! before using this interface. For installing GraspIt! see the installation instructions at http://graspit-simulator.github.io/.
