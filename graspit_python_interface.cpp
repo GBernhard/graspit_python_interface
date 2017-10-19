@@ -20,15 +20,23 @@ GraspitPythonInterface::~GraspitPythonInterface(){
 int GraspitPythonInterface::startGraspit(){
     std::cout << "GraspitPythonInterface: start GraspIt!" << std::endl;
 
-    int y = 1;
-    char c = 'c';
+    char *argv[10];
+    argv[0] = strdup("graspit_simulator");
+    argv[1] = strdup("--world");
+    argv[2] = strdup("plannerMug");
+    // argv[3] = strdup("--headless");
 
-    char *ptr1 = &c;
-    char *ptr2 = new char;
+    int argc = 3;
 
-    int argc = y;
-    char **argv = &ptr2;
-    bool headless = TRUE;
+    bool headless = false;
+
+    std::vector<std::string> args(argv, argv+argc);
+    for (size_t i = 1; i < args.size(); ++i) {
+        if (args[i] == "--headless") {
+          std::cout << "headless" << std::endl;
+          headless = true;
+        }
+    }
 
     std::cout << "GraspitPythonInterface: start GraspItApp" << std::endl;
     
@@ -43,7 +51,7 @@ int GraspitPythonInterface::startGraspit(){
     std::cout << "GraspitPythonInterface: start GraspitCore" << std::endl;
     
     GraspitCore core(argc, argv);
-    
+
     QObject::connect(qApp, SIGNAL(lastWindowClosed()), qApp, SLOT(quit()));
   
     if (!headless)
